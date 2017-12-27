@@ -1,9 +1,9 @@
 <div class="row col-12">
   <table *ngIf="data" class="table table-striped">
     <thead>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Amount</th>
+      <th class="btn-link" (click)="sortData('name')">Name</th>
+      <th class="btn-link" (click)="sortData('category')">Category</th>
+      <th class="btn-link" (click)="sortData('amount')">Amount</th>
     </thead>
     <tbody>
       <tr *ngFor="let record of data">
