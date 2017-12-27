@@ -1,0 +1,18 @@
+<div class="row col-12">
+  <table *ngIf="formattedData" class="table table-striped">
+    <thead>
+      <th class="btn-link" (click)="sortData('name')">Name</th>
+      <th class="btn-link" (click)="sortData('C1')">C1</th>
+      <th class="btn-link" (click)="sortData('C2')">C2</th>
+      <th class="btn-link" (click)="sortData('C3')">C3</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of formattedData">
+        <td>{{record.name}}</td>
+        <td>{{record.C1 ? record.C1 : '-'}}</td>
+        <td>{{record.C2 ? record.C2 : '-'}}</td>
+        <td>{{record.C3 ? record.C3 : '-'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

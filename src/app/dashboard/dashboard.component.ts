@@ -24,11 +24,11 @@ export class DashboardComponent implements OnInit {
   }
 
   sortData(columnName: string) {
-  this.isCurrentSortAscending = this.currentSortColumn === columnName ? !this.isCurrentSortAscending : true;
-  this.currentSortColumn = columnName;
-   this.data = this.data.sort((a, b) => {
-     return  (a[columnName] < b[columnName]) ? -1 * (this.isCurrentSortAscending ? 1 : -1) : (this.isCurrentSortAscending ? 1 : -1);
-    });
-  }
+    this.isCurrentSortAscending = this.currentSortColumn === columnName ? !this.isCurrentSortAscending : true;
+    this.currentSortColumn = columnName;
+    this.data = this.data.sort((a, b) => {
+      return  (a[columnName] < b[columnName]) ? -1 * (this.isCurrentSortAscending ? 1 : -1) : (this.isCurrentSortAscending ? 1 : -1);
+      });
+    }
 
 }
